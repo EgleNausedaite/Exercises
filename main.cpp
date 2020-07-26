@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include "Recursion.hpp"
+#include "Other.hpp"
 
 using namespace std;
 
@@ -20,8 +21,14 @@ int main(int argc, const char * argv[]) {
     cout << "Factorial: " << factorial(8) << "\n \n";
     
     printIntsDownToZero(5);
+    
+    cout << "digits in countDigits: "<< countDigits(67876) << "\n\n";
+
+    cout << "digits in countDigitsRec: "<< countDigits(89876) << "\n\n";
+    
+    cout << "sum of digits: "<< sumOfDigits(123) << "\n\n";
 
     
-    std::cout << "Hello, World!\n";
+    std::cout << "\n\n\n\nHello, World!\n";
     return 0;
 }

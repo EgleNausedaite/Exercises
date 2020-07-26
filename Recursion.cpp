@@ -73,6 +73,42 @@ void printIntsDownToZero(int n) /// 5 ----> 5,4,3,2,1
     std::cout << n << "\n";
 }
 
+int countDigitsRec(int n)
+{
+    int answer = 0;
+    if ( n/10 < 1)
+    {
+        return 1;
+    }
+    
+    countDigitsRec(n/10 - n %10);
+    answer++;
+    return answer;
+}
+
+int sumOfDigits(int n) //n=1234 sum==1+2+3+4
+{   //base
+    if (n == 0)
+    {
+        return 0;
+    }
+    if (n == 1)
+    {
+        return 1;
+    }
+    if (n < 0)
+    {
+        return -1;
+    }
+    
+    //reoccurring theme:
+    int lastDigit = n % 10;
+    int smallAnswer = sumOfDigits(n/10 - (n%10)/10);    
+    int answer = lastDigit + smallAnswer;
+    return answer;
+}
+
+
 
 
 

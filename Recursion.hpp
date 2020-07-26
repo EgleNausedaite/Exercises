@@ -10,7 +10,8 @@
 #define Recursion_hpp
 
 #include <stdio.h>
-#include <iostream>//create a function which returns an nth number of Fibonacci sequence:
+#include <iostream>
+//create a function which returns an nth number of Fibonacci sequence:
 int fibonacci(int n);
 
 //create a function which calculates x to the power of n
@@ -22,7 +23,11 @@ int factorial(int n);
 //function to list int until 0 numbers below n
 void printIntsDownToZero(int n);
 
+//function to count digits in a number n
+int countDigitsRec(int n);
 
+//counts a sum of digits of a number n
+int sumOfDigits(int n);
 
 
 
