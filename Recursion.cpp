@@ -187,7 +187,7 @@ bool isArraySorted(int array[], int n)
         return true;
     }
 
-    if (array[n] < array[n-1])
+    if (array[n - 1] < array[n - 2])
     {
         return false;
     }
