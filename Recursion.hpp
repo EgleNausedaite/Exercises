@@ -29,7 +29,16 @@ int countDigitsRec(int n);
 //counts a sum of digits of a number n
 int sumOfDigits(int n);
 
+//how many triangles from n dots?
+int trianglesFromDots(int n);
 
+int multiplication(int m, int n);
+
+int countZeroes(int n);
+
+double geometricSum(int k);
+
+bool isArraySorted(int array[], int n);
 
 
 

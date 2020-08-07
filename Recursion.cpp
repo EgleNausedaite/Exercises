@@ -108,6 +108,95 @@ int sumOfDigits(int n) //n=1234 sum==1+2+3+4
     return answer;
 }
 
+int trianglesFromDots(int n)
+{
+    //base
+    if ( n == 1 || n == 0 || n == 2)
+    {
+        return 0;
+    }
+    if ( n == 4 )
+    {
+        return 4;
+    }
+    if (n == 5) //fix 5 and 6 by finding generic
+    {
+        return 10;
+    }
+    if (n == 6)
+    {
+        return 20;
+    }
+    int answer = 0;
+    
+    //generic solution:
+    
+    
+    return answer;
+}
+
+
+int multiplication(int m, int n)
+{
+    if ( m == 0 || n == 0 )
+    {
+        return 0;
+    }
+    int smallAns = multiplication(m, n-1);
+    int answer = smallAns + m;
+    
+    return answer;
+}
+
+int countZeroes(int n) /// 230030
+{
+    if (n == 0)
+    {
+        return 0;
+    }
+    
+    int smallAnswer = countZeroes(n/10);
+    if (n%10 == 0)
+    {
+        return smallAnswer + 1;
+    }
+    else
+    {
+        return smallAnswer;
+    }
+}
+
+double geometricSum(int k)  ///k=3 => sum = 1 + 1/2 + 1/2^2 + 1/2^3
+{
+    if (k == 0)
+    {
+        return 1;
+    }
+    
+    //rec
+    double smallAnswer = geometricSum(k - 1);
+    double answer = 1.0/power(2, k) + smallAnswer;
+    
+    return answer;
+}
+
+bool isArraySorted(int array[], int n)
+{
+    if (n == 1)
+    {
+        return true;
+    }
+
+    if (array[n] < array[n-1])
+    {
+        return false;
+    }
+    bool isSmallArraySorted = isArraySorted(array, n-1);
+
+    return isSmallArraySorted;
+}
+
+
 
 
 
